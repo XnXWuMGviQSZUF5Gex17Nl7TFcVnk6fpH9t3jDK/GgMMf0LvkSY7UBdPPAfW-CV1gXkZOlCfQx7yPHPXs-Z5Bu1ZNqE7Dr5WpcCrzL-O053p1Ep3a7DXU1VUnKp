@@ -6,7 +6,7 @@ _G.ShowClass = false
 _G.FlyOn = false
 
 -- Window
-local Window, MainGUI = Library:CreateWindow("wabware v1")
+local Window, MainGUI = Library:CreateWindow("test hub")
 
 -- Tabs
 local Tab1 = Window:CreateTab("Main")
@@ -158,7 +158,6 @@ local ExampleToggle2 = Groupbox1:CreateToggle("Player ESP", function(state)
             if instance:IsA("Tool") then
                 hld = instance.Name
                 name.Text = "[".. hld.. "]"
-                print("added ".. instance.Name)
             end
         end)
         
@@ -166,7 +165,6 @@ local ExampleToggle2 = Groupbox1:CreateToggle("Player ESP", function(state)
             if instance:IsA("Tool") then
                 hld = "None"
                 name.Text = "[".. hld.. "]"
-                print("removed ".. instance.Name)
             end
         end)
         name.Color = color
@@ -187,10 +185,9 @@ local ExampleToggle2 = Groupbox1:CreateToggle("Player ESP", function(state)
                             name.Position = WTS(part)
                         end
                         local _, screen = workspace.CurrentCamera:WorldToViewportPoint(part.Position)
-                        if screen and _G.Toggle == true then
+                        if _G.Toggle == true then
                             name.Visible = true
                         else
-                            name.Visible = false
                             name:Remove()
                         end
                     end
