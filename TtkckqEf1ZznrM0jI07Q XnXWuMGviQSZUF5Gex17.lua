@@ -6,7 +6,7 @@ _G.ShowClass = false
 _G.FlyOn = false
 
 -- Window
-local Window, MainGUI = Library:CreateWindow("wabware")
+local Window, MainGUI = Library:CreateWindow("wabware v1")
 
 -- Tabs
 local Tab1 = Window:CreateTab("Main")
